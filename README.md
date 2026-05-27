@@ -11,7 +11,7 @@ Built with **FastAPI · PostgreSQL · React · Ant Design · Recharts**.
 **Prerequisites:** Docker and Docker Compose installed.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/industrial_dashboard.git
+git clone https://github.com/clairefantastic/industrial_dashboard.git
 cd industrial_dashboard
 docker compose up --build
 ```
