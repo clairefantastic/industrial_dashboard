@@ -233,7 +233,7 @@ const styles: Record<string, React.CSSProperties> = {
   footerText: {
     fontFamily: "'Share Tech Mono', monospace",
     fontSize:   "10px",
-    color:      "#2d3748",
+    color:      "#6b7a8d",
   },
   tooltip: {
     background:   "#161b22",

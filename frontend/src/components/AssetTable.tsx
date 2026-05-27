@@ -193,7 +193,7 @@ const styles: Record<string, React.CSSProperties> = {
     color:    "#8899aa",
   },
   na: {
-    color:      "#2d3748",
+    color:      "#6b7a8d",
     fontFamily: "'Share Tech Mono', monospace",
   },
   timestamp: {

@@ -236,7 +236,7 @@ const styles: Record<string, React.CSSProperties> = {
   asOf: {
     fontFamily: "'Share Tech Mono', monospace",
     fontSize:   "11px",
-    color:      "#2d3748",
+    color:      "#6b7a8d",
   },
   main: {
     maxWidth: "1400px",
@@ -272,7 +272,7 @@ const styles: Record<string, React.CSSProperties> = {
   placeholder: {
     fontFamily: "'Barlow Condensed', sans-serif",
     fontSize:   "18px",
-    color:      "#2d3748",
+    color:      "#6b7a8d",
     letterSpacing: "2px",
   },
   alert: {

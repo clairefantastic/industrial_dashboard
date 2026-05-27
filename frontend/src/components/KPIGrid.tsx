@@ -169,7 +169,7 @@ const styles: Record<string, React.CSSProperties> = {
   updatedAt: {
     fontFamily: "'Barlow', sans-serif",
     fontSize:   "10px",
-    color:      "#2d3748",
+    color:      "#6b7a8d",
     textAlign:  "right",
   },
 };
