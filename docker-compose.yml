@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: industrial_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: industrial_dashboard
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: industrial_backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/industrial_dashboard
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app  # live reload during development
+
+  frontend:
+    build: ./frontend
+    container_name: industrial_frontend
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app        # live reload
+      - /app/node_modules      # keep container's node_modules
+
+volumes:
+  postgres_data:
