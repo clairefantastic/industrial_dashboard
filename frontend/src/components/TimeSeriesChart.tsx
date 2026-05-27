@@ -34,6 +34,7 @@ const METRIC_COLORS: Record<string, string> = {
 
 const TIME_RANGES: { label: string; value: TimeRange }[] = [
   { label: "1H",  value: "1h"  },
+  { label: "2H",  value: "2h"  },
   { label: "6H",  value: "6h"  },
   { label: "24H", value: "24h" },
 ];
@@ -78,12 +79,9 @@ const CustomTooltip = ({ active, payload, label, unit }: any) => {
 
 export const TimeSeriesChart = ({ facilityId }: TimeSeriesChartProps) => {
   const [metric,    setMetric]    = useState("power");
-  const [timeRange, setTimeRange] = useState<TimeRange>("2h" as TimeRange ?? "1h");
+  const [timeRange, setTimeRange] = useState<TimeRange>("2h");
 
-  // Default to 1h
-  const activeRange: TimeRange = TIME_RANGES.some(t => t.value === timeRange)
-    ? timeRange as TimeRange
-    : "1h";
+  const activeRange: TimeRange = timeRange;
 
   const { data, isLoading, isError } = useReadings({
     facilityId,

@@ -9,9 +9,9 @@ import { useQuery } from "@tanstack/react-query";
 import dayjs from "dayjs";
 import { fetchSensorReadings, type SensorReadingsResponse } from "../api/client";
 
-export type TimeRange = "1h" | "6h" | "24h";
+export type TimeRange = "1h" | "2h" | "6h" | "24h";
 
-const HOURS: Record<TimeRange, number> = { "1h": 1, "6h": 6, "24h": 24 };
+const HOURS: Record<TimeRange, number> = { "1h": 1, "2h": 2, "6h": 6, "24h": 24 };
 const REFETCH_INTERVAL = 30_000;
 
 interface UseReadingsParams {
