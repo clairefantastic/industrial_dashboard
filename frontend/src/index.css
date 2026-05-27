@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0a0e14;
+  color: #e2e8f0;
+  font-family: 'Barlow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Ant Design dark overrides ── */
+
+/* Table rows */
+.ant-table {
+  background: transparent !important;
+  font-family: 'Barlow', sans-serif;
+}
+.ant-table-thead > tr > th {
+  background:    #0d1117 !important;
+  border-bottom: 1px solid #1e2530 !important;
+  color:         #4a5568 !important;
+  font-family:   'Barlow Condensed', sans-serif !important;
+  font-size:     11px !important;
+  letter-spacing: 1.5px !important;
+  font-weight:   600 !important;
+}
+.ant-table-tbody > tr > td {
+  background:    transparent !important;
+  border-bottom: 1px solid #161b22 !important;
+  padding:       10px 16px !important;
+}
+.ant-table-tbody > tr:hover > td {
+  background: #161b22 !important;
+}
+
+/* Select */
+.ant-select-selector {
+  background: transparent !important;
+  border: none !important;
+  color: #e2e8f0 !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+}
+.ant-select-arrow {
+  color: #4a5568 !important;
+}
+
+/* Segmented */
+.ant-segmented {
+  background: #161b22 !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+}
+.ant-segmented-item-selected {
+  background: #1e2530 !important;
+  color: #39ff14 !important;
+}
+.ant-segmented-item {
+  color: #4a5568 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a0e14; }
+::-webkit-scrollbar-thumb { background: #1e2530; border-radius: 3px; }
