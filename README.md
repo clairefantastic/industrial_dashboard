@@ -138,15 +138,3 @@ Metrics reported per asset type:
 | assembly | power, output |
 | cnc | temperature, power, output |
 
----
-
-## Known Limitations & Production Improvements
-
-| Area | Current | Production path |
-|------|---------|-----------------|
-| Real-time updates | 30s polling | WebSockets or SSE |
-| Time-series storage | PostgreSQL + indexes | TimescaleDB hypertables |
-| Auth | None | JWT + role-based access |
-| DB sessions | Synchronous SQLAlchemy | asyncpg for high concurrency |
-| CORS | Allow all origins | Restrict to frontend domain |
-| Data retention | Unlimited growth | Rolling window + archival policy |
