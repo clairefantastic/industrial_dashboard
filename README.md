@@ -59,34 +59,49 @@ npm run dev
 ---
 
 ## Project Structure
-
+ 
 ```
 industrial_dashboard/
 ├── docker-compose.yml
+├── .gitignore
+├── README.md
 ├── backend/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── .env.example
 │   ├── migrations/
-│   │   └── init.sql          # schema — runs automatically on first DB start
-│   ├── app/
-│   │   ├── main.py           # FastAPI app, CORS, lifespan
-│   │   ├── config.py         # environment variables (pydantic-settings)
-│   │   ├── database.py       # SQLAlchemy engine + session
-│   │   ├── models.py         # ORM models
-│   │   ├── schemas.py        # Pydantic request/response types
-│   │   ├── seed.py           # historical + live data generator
-│   │   └── routers/
-│   │       ├── facilities.py # GET /facilities, /{id}, /{id}/summary
-│   │       └── readings.py   # GET /sensor-readings
-│   └── requirements.txt
+│   │   └── init.sql            # schema — runs automatically on first DB start
+│   └── app/
+│       ├── __init__.py
+│       ├── main.py             # FastAPI app, CORS, lifespan
+│       ├── config.py           # environment variables (pydantic-settings)
+│       ├── database.py         # SQLAlchemy engine + session
+│       ├── models.py           # ORM models
+│       ├── schemas.py          # Pydantic request/response types
+│       ├── seed.py             # historical + live data generator
+│       └── routers/
+│           ├── __init__.py
+│           ├── facilities.py   # GET /facilities, /{id}, /{id}/summary
+│           └── readings.py     # GET /sensor-readings
 └── frontend/
+    ├── Dockerfile
+    ├── package.json
+    ├── vite.config.ts
+    ├── tsconfig.json
+    ├── index.html
     └── src/
-        ├── api/client.ts         # Axios instance + TypeScript types
+        ├── main.tsx
+        ├── App.tsx             # root dashboard component
+        ├── index.css           # global styles + Ant Design overrides
+        ├── api/
+        │   └── client.ts       # Axios instance + TypeScript types
         ├── hooks/
-        │   ├── useFacility.ts    # React Query hooks for facility data
-        │   └── useReadings.ts    # React Query hook for time-series data
+        │   ├── useFacility.ts  # React Query hooks for facility data
+        │   └── useReadings.ts  # React Query hook for time-series data
         └── components/
-            ├── KPIGrid.tsx        # 4 metric KPI cards
-            ├── TimeSeriesChart.tsx# Recharts line chart with time range selector
-            └── AssetTable.tsx     # Per-asset latest readings table
+            ├── KPIGrid.tsx         # 4 metric KPI cards
+            ├── TimeSeriesChart.tsx # Recharts line chart with time range selector
+            └── AssetTable.tsx      # per-asset latest readings table
 ```
 
 ---
