@@ -33,7 +33,7 @@ const antTheme = {
     colorBgElevated:   "#161b22",
     colorBorder:       "#1e2530",
     colorText:         "#e2e8f0",
-    colorTextSecondary:"#4a5568",
+    colorTextSecondary:"#8899aa",
     colorPrimary:      "#39ff14",
     fontFamily:        "'Barlow', sans-serif",
     borderRadius:       4,
@@ -217,7 +217,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontFamily:    "'Barlow Condensed', sans-serif",
     fontSize:      "10px",
     letterSpacing: "2px",
-    color:         "#4a5568",
+    color:         "#8899aa",
     fontWeight:    600,
   },
   headerRight: {
@@ -260,7 +260,7 @@ const styles: Record<string, React.CSSProperties> = {
   assetCount: {
     fontFamily: "'Barlow Condensed', sans-serif",
     fontSize:   "13px",
-    color:      "#4a5568",
+    color:      "#8899aa",
     letterSpacing: "1px",
   },
   center: {

@@ -132,7 +132,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontFamily:    "'Barlow Condensed', sans-serif",
     fontSize:      "11px",
     letterSpacing: "2px",
-    color:         "#4a5568",
+    color:         "#8899aa",
     fontWeight:    600,
   },
   icon: {
@@ -153,7 +153,7 @@ const styles: Record<string, React.CSSProperties> = {
   unit: {
     fontFamily: "'Barlow Condensed', sans-serif",
     fontSize:   "14px",
-    color:      "#4a5568",
+    color:      "#8899aa",
     fontWeight: 400,
   },
   subStats: {
@@ -164,7 +164,7 @@ const styles: Record<string, React.CSSProperties> = {
   subStat: {
     fontFamily: "'Share Tech Mono', monospace",
     fontSize:   "11px",
-    color:      "#4a5568",
+    color:      "#8899aa",
   },
   updatedAt: {
     fontFamily: "'Barlow', sans-serif",

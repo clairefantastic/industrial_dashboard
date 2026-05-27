@@ -147,13 +147,13 @@ export const TimeSeriesChart = ({ facilityId }: TimeSeriesChartProps) => {
               <CartesianGrid strokeDasharray="3 3" stroke="#1e2530" />
               <XAxis
                 dataKey="time"
-                tick={{ fontFamily: "'Share Tech Mono'", fontSize: 11, fill: "#4a5568" }}
+                tick={{ fontFamily: "'Share Tech Mono'", fontSize: 11, fill: "#8899aa" }}
                 axisLine={{ stroke: "#1e2530" }}
                 tickLine={false}
                 interval="preserveStartEnd"
               />
               <YAxis
-                tick={{ fontFamily: "'Share Tech Mono'", fontSize: 11, fill: "#4a5568" }}
+                tick={{ fontFamily: "'Share Tech Mono'", fontSize: 11, fill: "#8899aa" }}
                 axisLine={false}
                 tickLine={false}
                 width={60}
@@ -209,12 +209,12 @@ const styles: Record<string, React.CSSProperties> = {
     fontFamily:    "'Barlow Condensed', sans-serif",
     fontSize:      "11px",
     letterSpacing: "2px",
-    color:         "#4a5568",
+    color:         "#8899aa",
     fontWeight:    600,
   },
   segmented: {
     background: "#161b22",
-    color:      "#4a5568",
+    color:      "#8899aa",
   },
   chartWrapper: {
     position: "relative",
@@ -244,7 +244,7 @@ const styles: Record<string, React.CSSProperties> = {
   tooltipTime: {
     fontFamily: "'Barlow Condensed', sans-serif",
     fontSize:   "11px",
-    color:      "#4a5568",
+    color:      "#8899aa",
     marginBottom: "4px",
   },
   tooltipValue: {

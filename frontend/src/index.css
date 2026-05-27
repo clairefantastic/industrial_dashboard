@@ -21,7 +21,7 @@ body {
 .ant-table-thead > tr > th {
   background:    #0d1117 !important;
   border-bottom: 1px solid #1e2530 !important;
-  color:         #4a5568 !important;
+  color:         #8899aa !important;
   font-family:   'Barlow Condensed', sans-serif !important;
   font-size:     11px !important;
   letter-spacing: 1.5px !important;
@@ -47,7 +47,7 @@ body {
   letter-spacing: 0.5px !important;
 }
 .ant-select-arrow {
-  color: #4a5568 !important;
+  color: #8899aa !important;
 }
 
 /* Segmented */
@@ -62,7 +62,7 @@ body {
   color: #39ff14 !important;
 }
 .ant-segmented-item {
-  color: #4a5568 !important;
+  color: #8899aa !important;
 }
 
 /* Scrollbar */

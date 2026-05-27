@@ -167,7 +167,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontFamily:    "'Barlow Condensed', sans-serif",
     fontSize:      "11px",
     letterSpacing: "2px",
-    color:         "#4a5568",
+    color:         "#8899aa",
     fontWeight:    600,
     marginBottom:  "16px",
   },
@@ -190,7 +190,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   metricUnit: {
     fontSize: "10px",
-    color:    "#4a5568",
+    color:    "#8899aa",
   },
   na: {
     color:      "#2d3748",
@@ -199,7 +199,7 @@ const styles: Record<string, React.CSSProperties> = {
   timestamp: {
     fontFamily: "'Share Tech Mono', monospace",
     fontSize:   "12px",
-    color:      "#4a5568",
+    color:      "#8899aa",
   },
   table: {
     background: "transparent",
