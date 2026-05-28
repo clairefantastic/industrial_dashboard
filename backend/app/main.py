@@ -31,9 +31,8 @@ logger = logging.getLogger(__name__)
 # ------------------------------------------------------------------
 # Lifespan — runs startup/shutdown logic around the app.
 #
-# Why lifespan instead of @app.on_event("startup")?
-# on_event is deprecated in FastAPI 0.93+. Lifespan is the modern
-# pattern and is cleaner because startup and shutdown live together.
+# on_event is deprecated in FastAPI 0.93+. Lifespan is cleaner 
+# because startup and shutdown live together.
 # ------------------------------------------------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -70,7 +69,6 @@ app = FastAPI(
 # ------------------------------------------------------------------
 # CORS
 #
-# Why do we need this?
 # The React frontend (localhost:5173) makes requests to the FastAPI
 # backend (localhost:8000). Browsers block cross-origin requests by
 # default. CORS middleware adds the necessary headers to allow this.
@@ -103,7 +101,7 @@ def health():
 
 
 # ------------------------------------------------------------------
-# Root — friendly message so hitting / isn't confusing
+# Root — message for hitting
 # ------------------------------------------------------------------
 @app.get("/", tags=["meta"])
 def root():
